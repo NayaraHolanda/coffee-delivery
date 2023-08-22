@@ -9,11 +9,12 @@ export const AmountContainer = styled.div`
   display: flex;
   align-items: center;
 
-  gap: 0.25rem;
+  gap: 0.5rem;
 `
 
 export const Amount = styled.span`
   color: ${(props) => props.theme['base-title']};
+  line-height: 100%;
 `
 
 export const AmountButton = styled.button`
