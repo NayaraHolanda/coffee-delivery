@@ -1,5 +1,11 @@
+import { CheckoutCart } from './components/CheckoutCart'
 import { CheckoutForm } from './components/CheckoutForm'
-import { CheckoutContainer, FirstSection, SecondSection } from './styles'
+import {
+  CheckoutContainer,
+  FirstSection,
+  SecondSection,
+  SelectedCoffeesContainer,
+} from './styles'
 import { useForm } from 'react-hook-form'
 
 export function Checkout() {
@@ -19,15 +25,19 @@ export function Checkout() {
 
   return (
     <CheckoutContainer>
-      <section>
-        <h3>Complete seu pedido</h3>
-        <form action="">
+      <form action="">
+        <section>
+          <h3>Complete seu pedido</h3>
           <CheckoutForm />
-        </form>
-      </section>
-      <section>
-        <h3>Cafés selecionados</h3>
-      </section>
+        </section>
+        <section>
+          <h3>Cafés selecionados</h3>
+          <SelectedCoffeesContainer>
+            <CheckoutCart />
+            <CheckoutCart />
+          </SelectedCoffeesContainer>
+        </section>
+      </form>
     </CheckoutContainer>
   )
 }

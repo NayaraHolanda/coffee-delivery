@@ -1,15 +1,13 @@
 import { styled } from 'styled-components'
 
 export const CheckoutContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  form {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
 
-  gap: 2rem;
-  margin-top: 2.5rem;
-
-  section {
-    width: 100%;
+    gap: 2rem;
+    margin-top: 2.5rem;
   }
 
   h3 {
@@ -20,4 +18,14 @@ export const CheckoutContainer = styled.div`
 
     margin-bottom: 0.875rem;
   }
+`
+
+export const SelectedCoffeesContainer = styled.div`
+  background: ${(props) => props.theme['base-card']};
+  padding: 2.5rem;
+  border-radius: 6px 44px 6px 44px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 `
