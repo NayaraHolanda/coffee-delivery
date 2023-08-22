@@ -7,7 +7,7 @@ export function SecondaryButton() {
       <span>
         <Trash size={16} />
       </span>
-      Teste
+      Remover
     </SecondaryButtonStyled>
   )
 }

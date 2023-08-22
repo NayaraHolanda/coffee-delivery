@@ -7,7 +7,7 @@ export const SecondaryButtonStyled = styled.button`
   width: 100%;
   border: 0;
   border-radius: 6px;
-  padding: 0.75rem 0.5rem;
+  padding: 0 0.5rem;
 
   gap: 0.25rem;
 
