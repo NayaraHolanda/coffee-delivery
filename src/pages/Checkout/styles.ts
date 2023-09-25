@@ -29,3 +29,29 @@ export const SelectedCoffeesContainer = styled.div`
   flex-direction: column;
   gap: 1.5rem;
 `
+
+export const TotalPriceContainer = styled.p`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.75rem;
+`
+
+export const TotalPrice = styled.p`
+  color: ${(props) => props.theme['base-text']};
+  font-weight: 400;
+  line-height: 130%;
+  display: flex;
+  justify-content: space-between;
+
+  span:first-child {
+    font-size: 0.875rem;
+  }
+  span:last-child {
+    font-size: 1rem;
+  }
+
+  strong {
+    font-size: 1.25rem;
+  }
+`

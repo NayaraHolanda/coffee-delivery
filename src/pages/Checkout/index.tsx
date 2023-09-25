@@ -1,3 +1,4 @@
+import { PrimaryButton } from '../../components/PrimaryButton'
 import { CheckoutCart } from './components/CheckoutCart'
 import { CheckoutForm } from './components/CheckoutForm'
 import {
@@ -5,6 +6,8 @@ import {
   FirstSection,
   SecondSection,
   SelectedCoffeesContainer,
+  TotalPrice,
+  TotalPriceContainer,
 } from './styles'
 import { useForm } from 'react-hook-form'
 
@@ -35,6 +38,23 @@ export function Checkout() {
           <SelectedCoffeesContainer>
             <CheckoutCart />
             <CheckoutCart />
+
+            <TotalPriceContainer>
+              <TotalPrice>
+                <span>Total de itens</span>
+                <span>R$ 29,70</span>
+              </TotalPrice>
+              <TotalPrice>
+                <span>Entrega</span>
+                <span>R$ 3,50</span>
+              </TotalPrice>
+              <TotalPrice>
+                <strong>Total</strong>
+                <strong>R$ 33,20</strong>
+              </TotalPrice>
+            </TotalPriceContainer>
+
+            <PrimaryButton text="Confirmar pedido" type="submit" />
           </SelectedCoffeesContainer>
         </section>
       </form>
