@@ -4,11 +4,14 @@ import logo from '../../assets/logo.svg'
 import { Cart } from '../Cart'
 
 import { MapPin } from 'phosphor-react'
+import { NavLink } from 'react-router-dom'
 
 export function Header() {
   return (
     <HeaderContainer>
-      <img src={logo} alt="" />
+      <NavLink to="/" title="Home">
+        <img src={logo} alt="" />
+      </NavLink>
       <Nav>
         <Local>
           <span>

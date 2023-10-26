@@ -1,26 +1,45 @@
 import { IconButton } from '../IconButton'
-import { CatalogContainer, Tag, PriceContainer, ShopContainer } from './styles'
-import expresso from '../../assets/expresso.png'
+import {
+  CatalogContainer,
+  Tag,
+  PriceContainer,
+  ShopContainer,
+  Tags,
+} from './styles'
 import { InputNumber } from '../InputNumber'
+import { useContext } from 'react'
+import { ProductsContext } from '../../contexts/ProductsContext'
 
 export function Catalog() {
+  const { products } = useContext(ProductsContext)
+
   return (
-    <CatalogContainer>
-      <img src={expresso} alt="" />
-      <div>
-        <Tag>Tradicional</Tag>
-        <h4>Expresso Tradicional</h4>
-        <p>O tradicional café feito com água quente e grãos moídos</p>
-        <PriceContainer>
-          <span>
-            R$ <strong>9,90</strong>
-          </span>
-          <ShopContainer>
-            <InputNumber />
-            <IconButton />
-          </ShopContainer>
-        </PriceContainer>
-      </div>
-    </CatalogContainer>
+    <>
+      {products.map((product) => {
+        return (
+          <CatalogContainer key={product.id}>
+            <img src={`../../assets/${product.imageName}.png`} alt="" />
+            <div>
+              <Tags>
+                {product.tags.map((tag) => {
+                  return <Tag key={tag}>{tag}</Tag>
+                })}
+              </Tags>
+              <h4>{product.name}</h4>
+              <p>{product.description}</p>
+              <PriceContainer>
+                <span>
+                  R$ <strong>{product.price}</strong>
+                </span>
+                <ShopContainer>
+                  <InputNumber />
+                  <IconButton />
+                </ShopContainer>
+              </PriceContainer>
+            </div>
+          </CatalogContainer>
+        )
+      })}
+    </>
   )
 }

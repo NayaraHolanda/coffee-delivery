@@ -55,6 +55,11 @@ export const CatalogContainer = styled.div`
   }
 `
 
+export const Tags = styled.div`
+  display: flex;
+  gap: 0.25rem;
+`
+
 export const Tag = styled.span`
   background: ${(props) => props.theme['yellow-light']};
   color: ${(props) => props.theme['yellow-dark']};

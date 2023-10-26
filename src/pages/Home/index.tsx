@@ -58,10 +58,6 @@ export function Home() {
       <h2>Nossos cafés</h2>
       <CatalogSection>
         <Catalog />
-        <Catalog />
-        <Catalog />
-        <Catalog />
-        <Catalog />
       </CatalogSection>
     </HomeContainer>
   )
